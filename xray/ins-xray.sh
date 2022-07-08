@@ -1,7 +1,7 @@
 #!/bin/bash
 # V2Ray Mini Core Version 4.42.2
 # Script By colongvpn
-# @ Copyrigt 2021 By colongvpn
+# @ Copyrigt 2021 envy projects
 # =====================================================
 
 # Color
