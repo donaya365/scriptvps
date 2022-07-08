@@ -28,7 +28,7 @@ colongvpnnn="raw.githubusercontent.com/donaya365/scriptvps/main/ssr"
 # Link Hosting Kalian Untuk Shadowsocks
 colongvpnnnn="raw.githubusercontent.com/donaya365/scriptvps/main/shadowsocks"
 # Link Hosting Kalian Untuk Wireguard
-colongvpnnnnn="raw.githubusercontent.com/colongvpn/scriptvps/main/wireguard"
+colongvpnnnnn="raw.githubusercontent.com/donaya365/scriptvps/main/wireguard"
 # Link Hosting Kalian Untuk Xray
 colongvpnnnnnn="raw.githubusercontent.com/donaya365/scriptvps/main/xray"
 # Link Hosting Kalian Untuk Ipsec
@@ -36,7 +36,7 @@ colongvpnnnnnnn="raw.githubusercontent.com/donaya365/scriptvps/main/ipsec"
 # Link Hosting Kalian Untuk Backup
 colongvpnnnnnnnn="raw.githubusercontent.com/donaya365/scriptvps/main/backup"
 # Link Hosting Kalian Untuk Websocket
-colongvpnnnnnnnnn="raw.githubusercontent.com/colongvpn/scriptvps/main/websocket"
+colongvpnnnnnnnnn="raw.githubusercontent.com/donaya365/scriptvps/main/websocket"
 # Link Hosting Kalian Untuk Ohp
 colongvpnnnnnnnnnn="raw.githubusercontent.com/donaya365/scriptvps/main/ohp"
 
