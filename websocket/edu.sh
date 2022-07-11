@@ -1,6 +1,6 @@
 #!/bin/bash
 # Proxy For Edukasi & Imclass
-# My Telegram : https://t.me/zoldyckkkkkk
+# My Telegram : https://t.me/donaya365
 # ==========================================
 # Color
 RED='\033[0;31m'
@@ -21,21 +21,21 @@ echo -e "${NC}${GREEN}Permission Accepted...${NC}"
 else
 echo -e "${NC}${RED}Permission Denied!${NC}";
 echo -e "${NC}${LIGHT}Please Contact Admin!!"
-echo -e "${NC}${LIGHT}Telegram : https://t.me/zoldyckkkkkk"
+echo -e "${NC}${LIGHT}Telegram : https://t.me/donaya365"
 exit 0
 fi
 # Link Hosting Kalian
-colongvpn="raw.githubusercontent.com/donaya365/scriptvps/main/websocket"
+donaya365="raw.githubusercontent.com/donaya365/scriptvps/main/websocket"
 
 # Getting Proxy Template
-wget -q -O /usr/local/bin/ws-tls https://${colongvpn}/ws-tls.py
+wget -q -O /usr/local/bin/ws-tls https://${donaya365}/ws-tls.py
 chmod +x /usr/local/bin/ws-tls
 
 # Installing Service
 cat > /etc/systemd/system/ws-tls.service << END
 [Unit]
-Description=PYTHON PROXY MOD By ENVY VPN
-Documentation=https://t.me/zoldyckkkkkk
+Description=Python Proxy Mod By donaya365
+Documentation=https://t.me/donaya365
 After=network.target nss-lookup.target
 
 [Service]
@@ -56,14 +56,14 @@ systemctl enable ws-tls
 systemctl restart ws-tls
 
 # Getting Proxy Template
-wget -q -O /usr/local/bin/ws-nontls https://${colongvpn}/ws-nontls.py
+wget -q -O /usr/local/bin/ws-nontls https://${donaya365}/ws-nontls.py
 chmod +x /usr/local/bin/ws-nontls
 
 # Installing Service
 cat > /etc/systemd/system/ws-nontls.service << END
 [Unit]
-Description=Python Proxy Mod By colongvpn
-Documentation=https://t.me/colongvpn
+Description=Python Proxy Mod By donaya365
+Documentation=https://t.me/donaya365
 After=network.target nss-lookup.target
 
 [Service]
@@ -84,14 +84,14 @@ systemctl enable ws-nontls
 systemctl restart ws-nontls
 
 # Getting Proxy Template
-wget -q -O /usr/local/bin/ws-ovpn https://${colongvpn}/ws-ovpn.py
+wget -q -O /usr/local/bin/ws-ovpn https://${donaya365}/ws-ovpn.py
 chmod +x /usr/local/bin/ws-ovpn
 
 # Installing Service
 cat > /etc/systemd/system/ws-ovpn.service << END
 [Unit]
-Description=Python Proxy Mod By colongvpn
-Documentation=https://t.me/colongvpn
+Description=Python Proxy Mod By donaya365
+Documentation=https://t.me/donaya365
 After=network.target nss-lookup.target
 
 [Service]
