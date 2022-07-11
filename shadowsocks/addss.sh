@@ -1,5 +1,5 @@
 #!/bin/bash
-# My Telegram : https://t.me/zoldyckkkkkk
+# My Telegram : https://t.me/donaya365
 # ==========================================
 # Color
 RED='\033[0;31m'
@@ -14,13 +14,13 @@ LIGHT='\033[0;37m'
 # Getting
 MYIP=$(wget -qO- ipinfo.io/ip);
 echo "Checking VPS"
-IZIN=$( curl http://raw.githubusercontent.com/donaya365/perizinan/main/ipvps.txt | grep $MYIP )
+IZIN=$( curl https://raw.githubusercontent.com/donaya365/perizinan/main/ipvps.txt | grep $MYIP )
 if [ $MYIP = $IZIN ]; then
 echo -e "${NC}${GREEN}Permission Accepted...${NC}"
 else
 echo -e "${NC}${RED}Permission Denied!${NC}";
 echo -e "${NC}${LIGHT}Please Contact Admin!!"
-echo -e "${NC}${LIGHT}Telegram : https://t.me/colongvpn"
+echo -e "${NC}${LIGHT}Telegram : https://t.me/donaya365"
 exit 0
 fi
 clear
@@ -37,7 +37,7 @@ http=3443
 else
 http="$((lastport2+1))"
 fi
-source /var/lib/colongvpnstore/ipvps.conf
+source /var/lib/donaya365store/ipvps.conf
 if [[ "$IP2" = "" ]]; then
 domain=$(cat /etc/xray/domain)
 else
@@ -120,4 +120,4 @@ echo -e "Link HTTPS  : $linkss1"
 echo -e "========================="
 echo -e "Link HTTP   : $linkss2"
 echo -e "========================="
-echo -e "SCRIPT BY ENVY PROJECTS"
+echo -e "Script By donaya365"
