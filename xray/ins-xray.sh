@@ -1,7 +1,7 @@
 #!/bin/bash
 # V2Ray Mini Core Version 4.42.2
-# Script By colongvpn
-# @ Copyrigt 2021 envy projects
+# Script By donaya365
+# @ Copyrigt 2021 By donaya365
 # =====================================================
 
 # Color
@@ -456,7 +456,7 @@ cat > /etc/xray/trojan.json <<END
       "settings": {
         "clients": [
           {
-            "password": "colongvpnProject"
+            "password": "donaya365Project"
 #xray-trojan
           }
         ],
@@ -536,8 +536,8 @@ END
 # / / Installation V2Ray Service
 cat > /etc/systemd/system/xray@.service << END
 [Unit]
-Description=Xray Service ( %i ) By colongvpn
-Documentation=https://t.me/colongvpn
+Description=Xray Service ( %i ) By donaya365
+Documentation=https://t.me/donaya365
 After=network.target nss-lookup.target
 
 [Service]
@@ -679,9 +679,9 @@ END
 # Installing Trojan Go Service
 cat > /etc/systemd/system/trojan-go.service << END
 [Unit]
-Description=Trojan-Go Service By colongvpn
-Documentation=https://t.me/colongvpn
-Documentation=https://github.com/colongvpn/colongvpn
+Description=Trojan-Go Service By donaya365
+Documentation=https://t.me/donaya365
+Documentation=https://github.com/donaya365/donaya365
 After=network.target nss-lookup.target
 
 [Service]
