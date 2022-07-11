@@ -1,6 +1,6 @@
 #!/bin/bash
-# By colongvpn
-# My Telegram : https://t.me/zoldyckkkkkk
+# By donaya365
+# My Telegram : https://t.me/donaya365
 # ==========================================
 # Color
 RED='\033[0;31m'
@@ -15,27 +15,27 @@ LIGHT='\033[0;37m'
 # Getting
 MYIP=$(wget -qO- ipinfo.io/ip);
 echo "Checking VPS"
-IZIN=$( curl http://raw.githubusercontent.com/donaya365/perizinan/main/ipvps.txt | grep $MYIP )
+IZIN=$( curl https://raw.githubusercontent.com/donaya365/perizinan/main/ipvps.txt | grep $MYIP )
 if [ $MYIP = $IZIN ]; then
 echo -e "${NC}${GREEN}Permission Accepted...${NC}"
 else
 echo -e "${NC}${RED}Permission Denied!${NC}";
 echo -e "${NC}${LIGHT}Please Contact Admin!!"
-echo -e "${NC}${LIGHT}Telegram : https://t.me/zoldyckkkkkk"
+echo -e "${NC}${LIGHT}Telegram : https://t.me/donaya365"
 exit 0
 fi
 # ==================================================
 # Link Hosting Kalian
-colongvpn="raw.githubusercontent.com/donaya365/scriptvps/main/ssh"
+donaya365="raw.githubusercontent.com/donaya365/scriptvps/main/ssh"
 
 # Link Hosting Kalian Untuk Xray
-colongvpnn="raw.githubusercontent.com/donaya365/scriptvps/main/xray"
+donaya365n="raw.githubusercontent.com/donaya365/scriptvps/main/xray"
 
 # Link Hosting Kalian Untuk Trojan Go
-colongvpnnn="raw.githubusercontent.com/donaya365/scriptvps/main/trojango"
+donaya365nn="raw.githubusercontent.com/donaya365/scriptvps/main/trojango"
 
 # Link Hosting Kalian Untuk Stunnel5
-colongvpnnnn="raw.githubusercontent.com/donaya365/scriptvps/main/stunnel5"
+donaya365nnn="raw.githubusercontent.com/donaya365/scriptvps/main/stunnel5"
 
 # initializing var
 export DEBIAN_FRONTEND=noninteractive
@@ -49,13 +49,13 @@ ver=$VERSION_ID
 country=ID
 state=Indonesia
 locality=Indonesia
-organization=colongvpn
-organizationalunit=colongvpn
-commonname=colongvpn
-email=colongvpnstore@gmail.com
+organization=donaya365
+organizationalunit=donaya365
+commonname=donaya365
+email=donaya365store@gmail.com
 
 # simple password minimal
-wget -O /etc/pam.d/common-password "https://${colongvpn}/password"
+wget -O /etc/pam.d/common-password "https://${donaya365}/password"
 chmod +x /etc/pam.d/common-password
 
 # go to root
@@ -154,8 +154,8 @@ echo "neofetch" >> .profile
 apt -y install nginx php php-fpm php-cli php-mysql libxml-parser-perl
 rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
-curl https://${colongvpn}/nginx.conf > /etc/nginx/nginx.conf
-curl https://${colongvpn}/vps.conf > /etc/nginx/conf.d/vps.conf
+curl https://${donaya365}/nginx.conf > /etc/nginx/nginx.conf
+curl https://${donaya365}/vps.conf > /etc/nginx/conf.d/vps.conf
 sed -i 's/listen = \/var\/run\/php-fpm.sock/listen = 127.0.0.1:9000/g' /etc/php/fpm/pool.d/www.conf
 useradd -m vps;
 mkdir -p /home/vps/public_html
@@ -163,13 +163,13 @@ echo "<?php phpinfo() ?>" > /home/vps/public_html/info.php
 chown -R www-data:www-data /home/vps/public_html
 chmod -R g+rw /home/vps/public_html
 cd /home/vps/public_html
-wget -O /home/vps/public_html/index.html "https://${colongvpn}/index.html1"
+wget -O /home/vps/public_html/index.html "https://${donaya365}/index.html1"
 /etc/init.d/nginx restart
 cd
 
 # install badvpn
 cd
-wget -O /usr/bin/badvpn-udpgw "https://${colongvpn}/badvpn-udpgw64"
+wget -O /usr/bin/badvpn-udpgw "https://${donaya365}/badvpn-udpgw64"
 chmod +x /usr/bin/badvpn-udpgw
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7100 --max-clients 500' /etc/rc.local
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7200 --max-clients 500' /etc/rc.local
@@ -199,7 +199,7 @@ echo "/usr/sbin/nologin" >> /etc/shells
 # install squid
 cd
 apt -y install squid3
-wget -O /etc/squid/squid.conf "https://${colongvpn}/squid3.conf"
+wget -O /etc/squid/squid.conf "https://${donaya365}/squid3.conf"
 sed -i $MYIP2 /etc/squid/squid.conf
 
 # Install SSLH
@@ -253,12 +253,12 @@ systemctl enable vnstat
 rm -f /root/vnstat-2.6.tar.gz
 rm -rf /root/vnstat-2.6
 
-mkdir -p /usr/local/colongvpn
-mkdir -p /etc/colongvpn
+mkdir -p /usr/local/donaya365
+mkdir -p /etc/donaya365
 
 # install stunnel 5 
 cd /root/
-wget -q -O stunnel5.zip "https://${colongvpnnnn}/stunnel5.zip"
+wget -q -O stunnel5.zip "https://${donaya365nnn}/stunnel5.zip"
 unzip -o stunnel5.zip
 cd /root/stunnel
 chmod +x configure
@@ -304,11 +304,11 @@ cat > /etc/systemd/system/stunnel5.service << END
 [Unit]
 Description=Stunnel5 Service
 Documentation=https://stunnel.org
-Documentation=https://github.com/colongvpn
+Documentation=https://github.com/donaya365
 After=syslog.target network-online.target
 
 [Service]
-ExecStart=/usr/local/colongvpn/stunnel5 /etc/stunnel5/stunnel5.conf
+ExecStart=/usr/local/donaya365/stunnel5 /etc/stunnel5/stunnel5.conf
 Type=forking
 
 [Install]
@@ -316,12 +316,12 @@ WantedBy=multi-user.target
 END
 
 # Service Stunnel5 /etc/init.d/stunnel5
-wget -q -O /etc/init.d/stunnel5 "https://${colongvpnnnn}/stunnel5.init"
+wget -q -O /etc/init.d/stunnel5 "https://${donaya365nnn}/stunnel5.init"
 
 # Ubah Izin Akses
 chmod 600 /etc/stunnel5/stunnel5.pem
 chmod +x /etc/init.d/stunnel5
-cp /usr/local/bin/stunnel /usr/local/colongvpn/stunnel5
+cp /usr/local/bin/stunnel /usr/local/donaya365/stunnel5
 
 # Remove File
 rm -r -f /usr/local/share/doc/stunnel/
@@ -341,12 +341,12 @@ systemctl restart stunnel5
 /etc/init.d/stunnel5 restart
 
 #OpenVPN
-wget https://${colongvpn}/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
+wget https://${donaya365}/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
 
 echo; echo 'Installing DOS-Deflate 0.6'; echo
 echo; echo -n 'Downloading source files...'
 apt install -y dnsutils tcpdump dsniff grepcidr
-wget -qO ddos.zip "https://${colongvpn}/ddos-deflate.zip" > /dev/null 2>&1
+wget -qO ddos.zip "https://${donaya365}/ddos-deflate.zip" > /dev/null 2>&1
 unzip ddos.zip
 cd ddos-deflate
 chmod +x install.sh
@@ -387,10 +387,10 @@ echo "Banner /etc/issue.net" >>/etc/ssh/sshd_config
 sed -i 's@DROPBEAR_BANNER=""@DROPBEAR_BANNER="/etc/issue.net"@g' /etc/default/dropbear
 
 # Install BBR
-wget https://${colongvpn}/bbr.sh && chmod +x bbr.sh && ./bbr.sh
+wget https://${donaya365}/bbr.sh && chmod +x bbr.sh && ./bbr.sh
 
 # Ganti Banner
-wget -O /etc/issue.net "https://${colongvpn}/issue.net"
+wget -O /etc/issue.net "https://${donaya365}/issue.net"
 
 # blockir torrent
 iptables -A FORWARD -m string --string "get_peers" --algo bm -j DROP
@@ -411,53 +411,53 @@ netfilter-persistent reload
 
 # download script
 cd /usr/bin
-wget -O addhost "https://${colongvpn}/addhost.sh"
-wget -O about "https://${colongvpn}/about.sh"
-wget -O menu "https://${colongvpn}/menu.sh"
-wget -O addssh "https://${colongvpn}/addssh.sh"
-wget -O trialssh "https://${colongvpn}/trialssh.sh"
-wget -O delssh "https://${colongvpn}/delssh.sh"
-wget -O member "https://${colongvpn}/member.sh"
-wget -O delexp "https://${colongvpn}/delexp.sh"
-wget -O cekssh "https://${colongvpn}/cekssh.sh"
-wget -O restart "https://${colongvpn}/restart.sh"
-wget -O speedtest "https://${colongvpn}/speedtest_cli.py"
-wget -O info "https://${colongvpn}/info.sh"
-wget -O ram "https://${colongvpn}/ram.sh"
-wget -O renewssh "https://${colongvpn}/renewssh.sh"
-wget -O autokill "https://${colongvpn}/autokill.sh"
-wget -O ceklim "https://${colongvpn}/ceklim.sh"
-wget -O tendang "https://${colongvpn}/tendang.sh"
-wget -O clearlog "https://${colongvpn}/clearlog.sh"
-wget -O changeport "https://${colongvpn}/changeport.sh"
-wget -O portovpn "https://${colongvpn}/portovpn.sh"
-wget -O portwg "https://${colongvpn}/portwg.sh"
-wget -O porttrojan "https://${colongvpn}/porttrojan.sh"
-wget -O portsstp "https://${colongvpn}/portsstp.sh"
-wget -O portsquid "https://${colongvpn}/portsquid.sh"
-wget -O portv2ray "https://${colongvpn}/portv2ray.sh"
-wget -O portvless "https://${colongvpn}/portvless.sh"
-wget -O wbmn "https://${colongvpn}/webmin.sh"
-wget -O xp "https://${colongvpn}/xp.sh"
-wget -O running "https://${colongvpn}/running.sh"
-wget -O swapkvm "https://${colongvpn}/swapkvm.sh"
-wget -O addv2ray "https://${colongvpnn}/addv2ray.sh"
-wget -O addvless "https://${colongvpnn}/addvless.sh"
-wget -O addtrojan "https://${colongvpnn}/addtrojan.sh"
-wget -O delv2ray "https://${colongvpnn}/delv2ray.sh"
-wget -O delvless "https://${colongvpnn}/delvless.sh"
-wget -O deltrojan "https://${colongvpnn}/deltrojan.sh"
-wget -O cekv2ray "https://${colongvpnn}/cekv2ray.sh"
-wget -O cekvless "https://${colongvpnn}/cekvless.sh"
-wget -O cektrojan "https://${colongvpnn}/cektrojan.sh"
-wget -O renewv2ray "https://${colongvpnn}/renewv2ray.sh"
-wget -O renewvless "https://${colongvpnn}/renewvless.sh"
-wget -O renewtrojan "https://${colongvpnn}/renewtrojan.sh"
-wget -O certv2ray "https://${colongvpnn}/certv2ray.sh"
-wget -O addtrgo "https://${colongvpnnn}/addtrgo.sh"
-wget -O deltrgo "https://${colongvpnnn}/deltrgo.sh"
-wget -O renewtrgo "https://${colongvpnnn}/renewtrgo.sh"
-wget -O cektrgo "https://${colongvpnnn}/cektrgo.sh"
+wget -O addhost "https://${donaya365}/addhost.sh"
+wget -O about "https://${donaya365}/about.sh"
+wget -O menu "https://${donaya365}/menu.sh"
+wget -O addssh "https://${donaya365}/addssh.sh"
+wget -O trialssh "https://${donaya365}/trialssh.sh"
+wget -O delssh "https://${donaya365}/delssh.sh"
+wget -O member "https://${donaya365}/member.sh"
+wget -O delexp "https://${donaya365}/delexp.sh"
+wget -O cekssh "https://${donaya365}/cekssh.sh"
+wget -O restart "https://${donaya365}/restart.sh"
+wget -O speedtest "https://${donaya365}/speedtest_cli.py"
+wget -O info "https://${donaya365}/info.sh"
+wget -O ram "https://${donaya365}/ram.sh"
+wget -O renewssh "https://${donaya365}/renewssh.sh"
+wget -O autokill "https://${donaya365}/autokill.sh"
+wget -O ceklim "https://${donaya365}/ceklim.sh"
+wget -O tendang "https://${donaya365}/tendang.sh"
+wget -O clearlog "https://${donaya365}/clearlog.sh"
+wget -O changeport "https://${donaya365}/changeport.sh"
+wget -O portovpn "https://${donaya365}/portovpn.sh"
+wget -O portwg "https://${donaya365}/portwg.sh"
+wget -O porttrojan "https://${donaya365}/porttrojan.sh"
+wget -O portsstp "https://${donaya365}/portsstp.sh"
+wget -O portsquid "https://${donaya365}/portsquid.sh"
+wget -O portv2ray "https://${donaya365}/portv2ray.sh"
+wget -O portvless "https://${donaya365}/portvless.sh"
+wget -O wbmn "https://${donaya365}/webmin.sh"
+wget -O xp "https://${donaya365}/xp.sh"
+wget -O running "https://${donaya365}/running.sh"
+wget -O swapkvm "https://${donaya365}/swapkvm.sh"
+wget -O addv2ray "https://${donaya365n}/addv2ray.sh"
+wget -O addvless "https://${donaya365n}/addvless.sh"
+wget -O addtrojan "https://${donaya365n}/addtrojan.sh"
+wget -O delv2ray "https://${donaya365n}/delv2ray.sh"
+wget -O delvless "https://${donaya365n}/delvless.sh"
+wget -O deltrojan "https://${donaya365n}/deltrojan.sh"
+wget -O cekv2ray "https://${donaya365n}/cekv2ray.sh"
+wget -O cekvless "https://${donaya365n}/cekvless.sh"
+wget -O cektrojan "https://${donaya365n}/cektrojan.sh"
+wget -O renewv2ray "https://${donaya365n}/renewv2ray.sh"
+wget -O renewvless "https://${donaya365n}/renewvless.sh"
+wget -O renewtrojan "https://${donaya365n}/renewtrojan.sh"
+wget -O certv2ray "https://${donaya365n}/certv2ray.sh"
+wget -O addtrgo "https://${donaya365nn}/addtrgo.sh"
+wget -O deltrgo "https://${donaya365nn}/deltrgo.sh"
+wget -O renewtrgo "https://${donaya365nn}/renewtrgo.sh"
+wget -O cektrgo "https://${donaya365nn}/cektrgo.sh"
 chmod +x addhost
 chmod +x menu
 chmod +x addssh
