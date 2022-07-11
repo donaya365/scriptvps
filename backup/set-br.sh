@@ -1,5 +1,5 @@
 #!/bin/bash
-# My Telegram : https://t.me/zoldyckkkkkk
+# My Telegram : https://t.me/donaya365
 # ==========================================
 # Color
 RED='\033[0;31m'
@@ -20,15 +20,15 @@ echo -e "${NC}${GREEN}Permission Accepted...${NC}"
 else
 echo -e "${NC}${RED}Permission Denied!${NC}";
 echo -e "${NC}${LIGHT}Please Contact Admin!!"
-echo -e "${NC}${LIGHT}Telegram : https://t.me/colongvpn"
+echo -e "${NC}${LIGHT}Telegram : https://t.me/donaya365"
 exit 0
 fi
 # Link Hosting Kalian
-colongvpn="raw.githubusercontent.com/donaya365/scriptvps/main/backup"
+donaya365="raw.githubusercontent.com/donaya365/scriptvps/main/backup"
 
 curl https://rclone.org/install.sh | bash
 printf "q\n" | rclone config
-wget -O /root/.config/rclone/rclone.conf "https://${colongvpn}/rclone.conf"
+wget -O /root/.config/rclone/rclone.conf "https://${donaya365}/rclone.conf"
 git clone  https://github.com/magnific0/wondershaper.git
 cd wondershaper
 make install
@@ -46,18 +46,18 @@ account default
 host smtp.gmail.com
 port 587
 auth on
-user colongvpnstore@gmail.com
-from colongvpnstore@gmail.com
+user donaya365store@gmail.com
+from donaya365store@gmail.com
 password xbnelgkimafglnva 
 logfile ~/.msmtp.log
 EOF
 chown -R www-data:www-data /etc/msmtprc
 cd /usr/bin
-wget -O autobackup "https://${colongvpn}/autobackup.sh"
-wget -O backup "https://${colongvpn}/backup.sh"
-wget -O restore "https://${colongvpn}/restore.sh"
-wget -O strt "https://${colongvpn}/strt.sh"
-wget -O limitspeed "https://${colongvpn}/limitspeed.sh"
+wget -O autobackup "https://${donaya365}/autobackup.sh"
+wget -O backup "https://${donaya365}/backup.sh"
+wget -O restore "https://${donaya365}/restore.sh"
+wget -O strt "https://${donaya365}/strt.sh"
+wget -O limitspeed "https://${donaya365}/limitspeed.sh"
 chmod +x autobackup
 chmod +x backup
 chmod +x restore

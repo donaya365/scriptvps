@@ -1,5 +1,5 @@
 #!/bin/bash
-# My Telegram : https://t.me/zoldyckkkkkk
+# My Telegram : https://t.me/donaya365
 # ==========================================
 # Color
 RED='\033[0;31m'
@@ -20,7 +20,7 @@ echo -e "${NC}${GREEN}Permission Accepted...${NC}"
 else
 echo -e "${NC}${RED}Permission Denied!${NC}";
 echo -e "${NC}${LIGHT}Please Contact Admin!!"
-echo -e "${NC}${LIGHT}Telegram : https://t.me/colongvpn"
+echo -e "${NC}${LIGHT}Telegram : https://t.me/donaya365"
 exit 0
 fi
 clear
@@ -43,7 +43,7 @@ cp -r /etc/wireguard backup/wireguard
 cp /etc/ppp/chap-secrets backup/chap-secrets
 cp /etc/ipsec.d/passwd backup/passwd1
 cp /etc/shadowsocks-libev/akun.conf backup/ss.conf
-cp -r /var/lib/colongvpnstore/ backup/colongvpnstore
+cp -r /var/lib/donaya365store/ backup/donaya365store
 cp -r /home/sstp backup/sstp
 cp -r /etc/xray backup/xray
 cp -r /etc/trojan-go backup/trojan-go
@@ -62,7 +62,7 @@ echo -e "================================="
 echo -e "IP VPS        : $IP"
 echo -e "Link Backup   : $link"
 echo -e "================================="
-echo -e "SCRIPT BY ENVY PROJECTS"
+echo -e "Script By donaya365"
 echo ""
 echo -e "If you want to restore data, please enter the link above"
 echo ""
