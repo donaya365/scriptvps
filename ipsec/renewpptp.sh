@@ -1,5 +1,5 @@
 #!/bin/bash
-# My Telegram : https://t.me/zoldyckkkkkk
+# My Telegram : https://t.me/donaya365
 # ==========================================
 # Color
 RED='\033[0;31m'
@@ -14,17 +14,17 @@ LIGHT='\033[0;37m'
 # Getting
 MYIP=$(wget -qO- ipinfo.io/ip);
 echo "Checking VPS"
-IZIN=$( curl http://raw.githubusercontent.com/donaya365/perizinan/main/ipvps.txt | grep $MYIP )
+IZIN=$( curl https://raw.githubusercontent.com/donaya365/perizinan/main/ipvps.txt | grep $MYIP )
 if [ $MYIP = $IZIN ]; then
 echo -e "${NC}${GREEN}Permission Accepted...${NC}"
 else
 echo -e "${NC}${RED}Permission Denied!${NC}";
 echo -e "${NC}${LIGHT}Please Contact Admin!!"
-echo -e "${NC}${LIGHT}Telegram : https://t.me/colongvpn"
+echo -e "${NC}${LIGHT}Telegram : https://t.me/donaya365"
 exit 0
 fi
 clear
-NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/var/lib/colongvpnstore/data-user-pptp")
+NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/var/lib/donaya365store/data-user-pptp")
 	if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
 		clear
 		echo ""
@@ -37,7 +37,7 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/var/lib/colongvpnstore/data-user-pptp")
 	echo "Select the existing client you want to renew"
 	echo " Press CTRL+C to return"
 	echo -e "==============================="
-	grep -E "^### " "/var/lib/colongvpnstore/data-user-pptp" | cut -d ' ' -f 2-3 | nl -s ') '
+	grep -E "^### " "/var/lib/donaya365store/data-user-pptp" | cut -d ' ' -f 2-3 | nl -s ') '
 	until [[ ${CLIENT_NUMBER} -ge 1 && ${CLIENT_NUMBER} -le ${NUMBER_OF_CLIENTS} ]]; do
 		if [[ ${CLIENT_NUMBER} == '1' ]]; then
 			read -rp "Select one client [1]: " CLIENT_NUMBER
@@ -46,15 +46,15 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/var/lib/colongvpnstore/data-user-pptp")
 		fi
 	done
 read -p "Expired (Days): " masaaktif
-user=$(grep -E "^### " "/var/lib/colongvpnstore/data-user-pptp" | cut -d ' ' -f 2 | sed -n "${CLIENT_NUMBER}"p)
-exp=$(grep -E "^### " "/var/lib/colongvpnstore/data-user-pptp" | cut -d ' ' -f 3 | sed -n "${CLIENT_NUMBER}"p)
+user=$(grep -E "^### " "/var/lib/donaya365store/data-user-pptp" | cut -d ' ' -f 2 | sed -n "${CLIENT_NUMBER}"p)
+exp=$(grep -E "^### " "/var/lib/donaya365store/data-user-pptp" | cut -d ' ' -f 3 | sed -n "${CLIENT_NUMBER}"p)
 now=$(date +%Y-%m-%d)
 d1=$(date -d "$exp" +%s)
 d2=$(date -d "$now" +%s)
 exp2=$(( (d1 - d2) / 86400 ))
 exp3=$(($exp2 + $masaaktif))
 exp4=`date -d "$exp3 days" +"%Y-%m-%d"`
-sed -i "s/### $user $exp/### $user $exp4/g" /var/lib/colongvpnstore/data-user-pptp
+sed -i "s/### $user $exp/### $user $exp4/g" /var/lib/donaya365store/data-user-pptp
 clear
 echo ""
 echo "=========================="
@@ -63,4 +63,4 @@ echo "=========================="
 echo "Username  : $user"
 echo "Expired   : $exp4"
 echo "=========================="
-echo "SCRIPT BY ENVY PROJECTS"
+echo "Script By donaya365"

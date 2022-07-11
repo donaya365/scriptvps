@@ -2,8 +2,8 @@
 # Debian 9 & 10 64bit
 # Ubuntu 18.04 & 20.04 bit
 # Centos 7 & 8 64bit 
-# By colongvpn
-# My Telegram : https://t.me/zoldyckkkkkk
+# By donaya365
+# My Telegram : https://t.me/donaya365
 # ==========================================
 # Color
 RED='\033[0;31m'
@@ -18,18 +18,18 @@ LIGHT='\033[0;37m'
 # Getting
 MYIP=$(wget -qO- ipinfo.io/ip);
 echo "Checking VPS"
-IZIN=$( curl http://raw.githubusercontent.com/donaya365/perizinan/main/ipvps.txt | grep $MYIP )
+IZIN=$( curl https://raw.githubusercontent.com/donaya365/perizinan/main/ipvps.txt | grep $MYIP )
 if [ $MYIP = $IZIN ]; then
 echo -e "${NC}${GREEN}Permission Accepted...${NC}"
 else
 echo -e "${NC}${RED}Permission Denied!${NC}";
 echo -e "${NC}${LIGHT}Please Contact Admin!!"
-echo -e "${NC}${LIGHT}Telegram : https://t.me/colongvpn"
+echo -e "${NC}${LIGHT}Telegram : https://t.me/donaya365"
 exit 0
 fi
 # ==================================================
 # Link Hosting Kalian
-colongvpn="raw.githubusercontent.com/donaya365/scriptvps/main/ipsec"
+donaya365="raw.githubusercontent.com/donaya365/scriptvps/main/ipsec"
 
 VPN_IPSEC_PSK='myvpn'
 NET_IFACE=$(ip -o $NET_IFACE -4 route show to default | awk '{print $5}');
@@ -303,12 +303,12 @@ mkdir -p /run/pluto
 service fail2ban restart 2>/dev/null
 service ipsec restart 2>/dev/null
 service xl2tpd restart 2>/dev/null
-wget -O /usr/bin/addl2tp https://${colongvpn}/addl2tp.sh && chmod +x /usr/bin/addl2tp
-wget -O /usr/bin/dell2tp https://${colongvpn}/dell2tp.sh && chmod +x /usr/bin/dell2tp
-wget -O /usr/bin/addpptp https://${colongvpn}/addpptp.sh && chmod +x /usr/bin/addpptp
-wget -O /usr/bin/delpptp https://${colongvpn}/delpptp.sh && chmod +x /usr/bin/delpptp
-wget -O /usr/bin/renewpptp https://${colongvpn}/renewpptp.sh && chmod +x /usr/bin/renewpptp
-wget -O /usr/bin/renewl2tp https://${colongvpn}/renewl2tp.sh && chmod +x /usr/bin/renewl2tp
-touch /var/lib/colongvpnstore/data-user-l2tp
-touch /var/lib/colongvpnstore/data-user-pptp
+wget -O /usr/bin/addl2tp https://${donaya365}/addl2tp.sh && chmod +x /usr/bin/addl2tp
+wget -O /usr/bin/dell2tp https://${donaya365}/dell2tp.sh && chmod +x /usr/bin/dell2tp
+wget -O /usr/bin/addpptp https://${donaya365}/addpptp.sh && chmod +x /usr/bin/addpptp
+wget -O /usr/bin/delpptp https://${donaya365}/delpptp.sh && chmod +x /usr/bin/delpptp
+wget -O /usr/bin/renewpptp https://${donaya365}/renewpptp.sh && chmod +x /usr/bin/renewpptp
+wget -O /usr/bin/renewl2tp https://${donaya365}/renewl2tp.sh && chmod +x /usr/bin/renewl2tp
+touch /var/lib/donaya365store/data-user-l2tp
+touch /var/lib/donaya365store/data-user-pptp
 rm -f /root/ipsec.sh
