@@ -2,8 +2,8 @@
 # Debian 9 & 10 64bit
 # Ubuntu 18.04 & 20.04 bit
 # Centos 7 & 8 64bit 
-# By colongvpn
-# My Telegram : https://t.me/zoldyckkkkkk
+# By donaya365
+# My Telegram : https://t.me/donaya365
 # ==========================================
 # Color
 RED='\033[0;31m'
@@ -24,12 +24,12 @@ echo -e "${NC}${GREEN}Permission Accepted...${NC}"
 else
 echo -e "${NC}${RED}Permission Denied!${NC}";
 echo -e "${NC}${LIGHT}Please Contact Admin!!"
-echo -e "${NC}${LIGHT}Telegram : https://t.me/zoldyckkkkkk"
+echo -e "${NC}${LIGHT}Telegram : https://t.me/donaya365"
 exit 0
 fi
 # ==================================================
 # Link Hosting Kalian
-colongvpn="raw.githubusercontent.com/colongvpn/scriptvps/main/wireguard"
+donaya365="raw.githubusercontent.com/donaya365/scriptvps/main/wireguard"
 
 # Check OS version
 if [[ -e /etc/debian_version ]]; then
@@ -48,7 +48,7 @@ if [[ -e /etc/wireguard/params ]]; then
 	exit 1
 fi
 
-echo -e "${Info} Wireguard Script By colongvpn"
+echo -e "${Info} Wireguard Script By donaya365"
 # Detect public IPv4 address and pre-fill for the user
 
 # Detect public interface and pre-fill for the user
@@ -114,9 +114,9 @@ WG_RUNNING=$?
 
 # Tambahan
 cd /usr/bin
-wget -O addwg "https://${colongvpn}/addwg.sh"
-wget -O delwg "https://${colongvpn}/delwg.sh"
-wget -O renewwg "https://${colongvpn}/renewwg.sh"
+wget -O addwg "https://${donaya365}/addwg.sh"
+wget -O delwg "https://${donaya365}/delwg.sh"
+wget -O renewwg "https://${donaya365}/renewwg.sh"
 chmod +x addwg
 chmod +x delwg
 chmod +x renewwg
