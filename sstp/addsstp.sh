@@ -1,5 +1,5 @@
 #!/bin/bash
-# My Telegram : https://t.me/zoldyckkkkkk
+# My Telegram : https://t.me/donaya365
 # ==========================================
 # Color
 RED='\033[0;31m'
@@ -20,11 +20,11 @@ echo -e "${NC}${GREEN}Permission Accepted...${NC}"
 else
 echo -e "${NC}${RED}Permission Denied!${NC}";
 echo -e "${NC}${LIGHT}Please Contact Admin!!"
-echo -e "${NC}${LIGHT}Telegram : https://t.me/zoldyckkkkkk"
+echo -e "${NC}${LIGHT}Telegram : https://t.me/donaya365"
 exit 0
 fi
 clear
-source /var/lib/colongvpnstore/ipvps.conf
+source /var/lib/donaya365store/ipvps.conf
 if [[ "$IP2" = "" ]]; then
 domain=$(cat /etc/xray/domain)
 else
@@ -34,7 +34,7 @@ IP=$(wget -qO- ipinfo.io/ip);
 sstp="$(cat ~/log-install.txt | grep -i SSTP | cut -d: -f2|sed 's/ //g')"
 until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
 		read -rp "Usernew : " -e user
-		CLIENT_EXISTS=$(grep -w $user /var/lib/colongvpnstore/data-user-sstp | wc -l)
+		CLIENT_EXISTS=$(grep -w $user /var/lib/donaya365store/data-user-sstp | wc -l)
 
 		if [[ ${CLIENT_EXISTS} == '1' ]]; then
 			echo ""
@@ -49,7 +49,7 @@ exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
 cat >> /home/sstp/sstp_account <<EOF
 $user * $pass *
 EOF
-echo -e "### $user $exp">>"/var/lib/colongvpnstore/data-user-sstp"
+echo -e "### $user $exp">>"/var/lib/donaya365store/data-user-sstp"
 clear
 cat <<EOF
 
@@ -65,5 +65,5 @@ Cert      : http://$IP:89/server.crt
 Created   : $hariini
 Expired   : $exp
 ============================
-SCRIPT BY ENVY PROJECTS
+Script By donaya365
 EOF

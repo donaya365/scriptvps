@@ -1,5 +1,5 @@
 #!/bin/bash
-# My Telegram : https://t.me/zoldyckkkkkk
+# My Telegram : https://t.me/donaya365
 # ==========================================
 # Color
 RED='\033[0;31m'
@@ -20,11 +20,11 @@ echo -e "${NC}${GREEN}Permission Accepted...${NC}"
 else
 echo -e "${NC}${RED}Permission Denied!${NC}";
 echo -e "${NC}${LIGHT}Please Contact Admin!!"
-echo -e "${NC}${LIGHT}Telegram : https://t.me/zoldyckkkkkk"
+echo -e "${NC}${LIGHT}Telegram : https://t.me/donaya365"
 exit 0
 fi
 # Link Hosting Kalian
-colongvpn="raw.githubusercontent.com/colongvpn/scriptvps/main/sstp"
+donaya365="raw.githubusercontent.com/donaya365/scriptvps/main/sstp"
 
 MYIP=$(wget -qO- ipinfo.io/ip);
 MYIP2="s/xxxxxxxxx/$MYIP/g";
@@ -47,15 +47,15 @@ fi
 fi
 mkdir /home/sstp
 touch /home/sstp/sstp_account
-touch /var/lib/colongvpnstore/data-user-sstp
+touch /var/lib/donaya365store/data-user-sstp
 #detail nama perusahaan
 country=ID
 state=Indonesia
 locality=Indonesia
-organization=colongvpn
-organizationalunit=colongvpn
-commonname=colongvpn
-email=colongvpnstore@gmail.com
+organization=donaya365
+organizationalunit=donaya365
+commonname=donaya365
+email=donaya365store@gmail.com
 
 #install sstp
 apt-get install -y build-essential cmake gcc linux-headers-`uname -r` git libpcre3-dev libssl-dev liblua5.1-0-dev ppp
@@ -67,7 +67,7 @@ make
 cpack -G DEB
 dpkg -i accel-ppp.deb
 mv /etc/accel-ppp.conf.dist /etc/accel-ppp.conf
-wget -O /etc/accel-ppp.conf "https://${colongvpn}/accel.conf"
+wget -O /etc/accel-ppp.conf "https://${donaya365}/accel.conf"
 sed -i $MYIP2 /etc/accel-ppp.conf
 chmod +x /etc/accel-ppp.conf
 systemctl start accel-ppp
@@ -89,8 +89,8 @@ iptables-restore -t < /etc/iptables.up.rules
 netfilter-persistent save > /dev/null
 netfilter-persistent reload > /dev/null
 #input perintah sstp
-wget -O /usr/bin/addsstp https://${colongvpn}/addsstp.sh && chmod +x /usr/bin/addsstp
-wget -O /usr/bin/delsstp https://${colongvpn}/delsstp.sh && chmod +x /usr/bin/delsstp
-wget -O /usr/bin/ceksstp https://${colongvpn}/ceksstp.sh && chmod +x /usr/bin/ceksstp
-wget -O /usr/bin/renewsstp https://${colongvpn}/renewsstp.sh && chmod +x /usr/bin/renewsstp
+wget -O /usr/bin/addsstp https://${donaya365}/addsstp.sh && chmod +x /usr/bin/addsstp
+wget -O /usr/bin/delsstp https://${donaya365}/delsstp.sh && chmod +x /usr/bin/delsstp
+wget -O /usr/bin/ceksstp https://${donaya365}/ceksstp.sh && chmod +x /usr/bin/ceksstp
+wget -O /usr/bin/renewsstp https://${donaya365}/renewsstp.sh && chmod +x /usr/bin/renewsstp
 rm -f /root/sstp.sh
