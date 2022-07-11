@@ -5,9 +5,9 @@ if [ "${EUID}" -ne 0 ]; then
 fi
 if [ "$(systemd-detect-virt)" == "openvz" ]; then
 		echo "OpenVZ is not supported"
-		exit 1
+		
 fi
-# My Telegram : https://t.me/colongvpn
+# My Telegram : https://t.me/donaya365
 # ==========================================
 # Color
 RED='\033[0;31m'
@@ -20,25 +20,25 @@ CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 # ==========================================
 # Link Hosting Kalian Untuk Ssh Vpn
-colongvpn="raw.githubusercontent.com/donaya365/scriptvps/main/ssh"
+donaya365="raw.githubusercontent.com/donaya365/scriptvps/main/ssh"
 # Link Hosting Kalian Untuk Sstp
-colongvpnn="raw.githubusercontent.com/donaya365/scriptvps/main/sstp"
+donaya365n="raw.githubusercontent.com/donaya365/scriptvps/main/sstp"
 # Link Hosting Kalian Untuk Ssr
-colongvpnnn="raw.githubusercontent.com/donaya365/scriptvps/main/ssr"
+donaya365nn="raw.githubusercontent.com/donaya365/scriptvps/main/ssr"
 # Link Hosting Kalian Untuk Shadowsocks
-colongvpnnnn="raw.githubusercontent.com/donaya365/scriptvps/main/shadowsocks"
+donaya365nnn="raw.githubusercontent.com/donaya365/scriptvps/main/shadowsocks"
 # Link Hosting Kalian Untuk Wireguard
-colongvpnnnnn="raw.githubusercontent.com/donaya365/scriptvps/main/wireguard"
+donaya365nnnn="raw.githubusercontent.com/donaya365/scriptvps/main/wireguard"
 # Link Hosting Kalian Untuk Xray
-colongvpnnnnnn="raw.githubusercontent.com/donaya365/scriptvps/main/xray"
+donaya365nnnnn="raw.githubusercontent.com/donaya365/scriptvps/main/xray"
 # Link Hosting Kalian Untuk Ipsec
-colongvpnnnnnnn="raw.githubusercontent.com/donaya365/scriptvps/main/ipsec"
+donaya365nnnnnn="raw.githubusercontent.com/donaya365/scriptvps/main/ipsec"
 # Link Hosting Kalian Untuk Backup
-colongvpnnnnnnnn="raw.githubusercontent.com/donaya365/scriptvps/main/backup"
+donaya365nnnnnnn="raw.githubusercontent.com/donaya365/scriptvps/main/backup"
 # Link Hosting Kalian Untuk Websocket
-colongvpnnnnnnnnn="raw.githubusercontent.com/donaya365/scriptvps/main/websocket"
+donaya365nnnnnnnn="raw.githubusercontent.com/donaya365/scriptvps/main/websocket"
 # Link Hosting Kalian Untuk Ohp
-colongvpnnnnnnnnnn="raw.githubusercontent.com/donaya365/scriptvps/main/ohp"
+donaya365nnnnnnnnn="raw.githubusercontent.com/donaya365/scriptvps/main/ohp"
 
 # Getting
 MYIP=$(wget -qO- ipinfo.io/ip);
@@ -49,7 +49,7 @@ echo -e "${NC}${GREEN}Permission Accepted...${NC}"
 else
 echo -e "${NC}${RED}Permission Denied!${NC}";
 echo -e "${NC}${LIGHT}Please Contact Admin!!"
-echo -e "${NC}${LIGHT}Telegram : https://t.me/zoldyckkkkkk"
+echo -e "${NC}${LIGHT}Telegram : https://t.me/donaya365"
 exit 0
 fi
 rm -f setup.sh
@@ -58,26 +58,26 @@ if [ -f "/etc/xray/domain" ]; then
 echo "Script Already Installed"
 exit 0
 fi
-mkdir /var/lib/colongvpnstore;
-echo "IP=" >> /var/lib/colongvpnstore/ipvps.conf
-wget https://${colongvpn}/cf.sh && chmod +x cf.sh && ./cf.sh
+mkdir /var/lib/donaya365store;
+echo "IP=" >> /var/lib/donaya365store/ipvps.conf
+wget https://${donaya365}/cf.sh && chmod +x cf.sh && ./cf.sh
 #install ssh ovpn
-wget https://${colongvpn}/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
-wget https://${colongvpnn}/sstp.sh && chmod +x sstp.sh && screen -S sstp ./sstp.sh
+wget https://${donaya365}/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
+wget https://${donaya365n}/sstp.sh && chmod +x sstp.sh && screen -S sstp ./sstp.sh
 #install ssr
-wget https://${colongvpnnn}/ssr.sh && chmod +x ssr.sh && screen -S ssr ./ssr.sh
-wget https://${colongvpnnnn}/sodosok.sh && chmod +x sodosok.sh && screen -S ss ./sodosok.sh
+wget https://${donaya365nn}/ssr.sh && chmod +x ssr.sh && screen -S ssr ./ssr.sh
+wget https://${donaya365nnn}/sodosok.sh && chmod +x sodosok.sh && screen -S ss ./sodosok.sh
 #installwg
-wget https://${colongvpnnnnn}/wg.sh && chmod +x wg.sh && screen -S wg ./wg.sh
+wget https://${donaya365nnnn}/wg.sh && chmod +x wg.sh && screen -S wg ./wg.sh
 #install v2ray
-wget https://${colongvpnnnnnn}/ins-xray.sh && chmod +x ins-xray.sh && screen -S xray ./ins-xray.sh
+wget https://${donaya365nnnnn}/ins-xray.sh && chmod +x ins-xray.sh && screen -S xray ./ins-xray.sh
 #install L2TP
-wget https://${colongvpnnnnnnn}/ipsec.sh && chmod +x ipsec.sh && screen -S ipsec ./ipsec.sh
-wget https://${colongvpnnnnnnnn}/set-br.sh && chmod +x set-br.sh && ./set-br.sh
+wget https://${donaya365nnnnnn}/ipsec.sh && chmod +x ipsec.sh && screen -S ipsec ./ipsec.sh
+wget https://${donaya365nnnnnnn}/set-br.sh && chmod +x set-br.sh && ./set-br.sh
 # Websocket
-wget https://${colongvpnnnnnnnnn}/edu.sh && chmod +x edu.sh && ./edu.sh
+wget https://${donaya365nnnnnnnn}/edu.sh && chmod +x edu.sh && ./edu.sh
 # Ohp Server
-wget https://${colongvpnnnnnnnnnn}/ohp.sh && chmod +x ohp.sh && ./ohp.sh
+wget https://${donaya365nnnnnnnnn}/ohp.sh && chmod +x ohp.sh && ./ohp.sh
 
 rm -f /root/ssh-vpn.sh
 rm -f /root/sstp.sh
@@ -92,7 +92,7 @@ rm -f /root/ohp.sh
 cat <<EOF> /etc/systemd/system/autosett.service
 [Unit]
 Description=autosetting
-Documentation=https://t.me/zoldyckkkkkk
+Documentation=https://t.me/donaya365
 
 [Service]
 Type=oneshot
@@ -104,14 +104,14 @@ WantedBy=multi-user.target
 EOF
 systemctl daemon-reload
 systemctl enable autosett
-wget -O /etc/set.sh "https://${colongvpn}/set.sh"
+wget -O /etc/set.sh "https://${donaya365}/set.sh"
 chmod +x /etc/set.sh
 history -c
 echo "2.9" > /home/ver
 echo " "
 echo "Installation has been completed!!"
 echo " "
-echo "=================================-ENVY VPN-===========================" | tee -a log-install.txt
+echo "=================================-donaya365 Project-===========================" | tee -a log-install.txt
 echo "" | tee -a log-install.txt
 echo "----------------------------------------------------------------------------" | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
@@ -159,12 +159,12 @@ echo "   - White Label" | tee -a log-install.txt
 echo "   - Installation Log --> /root/log-install.txt"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "   - Dev/Main                : Horas Marolop Amsal Siregar"  | tee -a log-install.txt
-echo "   - Recode                  : ENVY PROJECTvpn" | tee -a log-install.txt
-echo "   - Telegram                : T.me/zoldyckkkkkk"  | tee -a log-install.txt
+echo "   - Recode                  : donaya365" | tee -a log-install.txt
+echo "   - Telegram                : T.me/donaya365"  | tee -a log-install.txt
 echo "   - Instagram               : ~"  | tee -a log-install.txt
 echo "   - Whatsapp                : ~"  | tee -a log-install.txt
 echo "   - Facebook                : ~" | tee -a log-install.txt
-echo "----------------------SCRIPT CREATED BY ENVY PROJECT----------------------" | tee -a log-install.txt
+echo "----------------------Script Created By donaya365 Project----------------------" | tee -a log-install.txt
 echo ""
 echo " Reboot 15 Sec"
 sleep 15
