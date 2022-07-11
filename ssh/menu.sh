@@ -24,7 +24,7 @@ white='\e[1;37m'
 NC='\e[0m'
 
 echo -e "  $CYAN ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-echo -e "$y          Telegram : https://t.me/envyprojects365 $wh"
+echo -e "$y          Telegram : https://t.me/Donaya365 $wh"
 echo -e "$y        PREMIUM AUTO SCRIPT BY ENVY PROJECTS $wh"
 echo -e "  $CYAN ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 echo ""
