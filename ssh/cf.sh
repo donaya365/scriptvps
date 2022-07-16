@@ -25,7 +25,7 @@ exit 0
 fi
 clear
 apt install jq curl -y
-DOMAIN=vip-server.xyz
+DOMAIN=envy26.me
 sub=$(</dev/urandom tr -dc a-z0-9 | head -c4)
 SUB_DOMAIN=${sub}.envy26.me
 CF_ID=kidroster55@gmail.com
