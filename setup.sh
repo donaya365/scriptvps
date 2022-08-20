@@ -78,7 +78,14 @@ wget https://${donaya365nnnnnnn}/set-br.sh && chmod +x set-br.sh && ./set-br.sh
 wget https://${donaya365nnnnnnnn}/edu.sh && chmod +x edu.sh && ./edu.sh
 # Ohp Server
 wget https://${donaya365nnnnnnnnn}/ohp.sh && chmod +x ohp.sh && ./ohp.sh
-
+# Install Slowdns Server
+# wget https://raw.githubusercontent.com/donaya365/scriptvps/master/Slowdns/install && chmod +x install && bash install
+# Informasi IP Saya dan Semua Port TCP UDP
+# wget https://raw.githubusercontent.com/donaya365/scriptvps/master/ipsaya.sh && chmod +x ipsaya.sh
+#
+# install xray grpc
+wget https://raw.githubusercontent.com/donaya365/scriptvps/master/grpc/sl-grpc.sh && chmod +x sl-grpc.sh && screen -S sl-grpc ./sl-grpc.sh
+#
 rm -f /root/ssh-vpn.sh
 rm -f /root/sstp.sh
 rm -f /root/wg.sh
@@ -135,6 +142,8 @@ echo "   - XRAYS Vmess None TLS    : 80"  | tee -a log-install.txt
 echo "   - XRAYS Vless TLS         : 2083"  | tee -a log-install.txt
 echo "   - XRAYS Vless None TLS    : 2095"  | tee -a log-install.txt
 echo "   - XRAYS Trojan            : 2087"  | tee -a log-install.txt
+echo "   - XRAYS VMESS GRPC        : 1180"  | tee -a log-install.txt
+echo "   - XRAYS VLESS GRPC        : 2280"  | tee -a log-install.txt
 echo "   - Websocket TLS           : 443"  | tee -a log-install.txt
 echo "   - Websocket None TLS      : 8880"  | tee -a log-install.txt
 echo "   - Websocket Ovpn          : 2086"  | tee -a log-install.txt
